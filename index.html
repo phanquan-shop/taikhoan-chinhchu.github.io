@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phan Quân - Bảng Giá Dịch Vụ Tài Khoản Premium</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* --- CÀI ĐẶT CHUNG & BIẾN MÀU SẮC --- */
+        :root {
+            --primary-color: #007bff; /* Màu xanh dương chủ đạo */
+            --dark-color: #1a1a1a;
+            --light-color: #f4f4f4;
+            --grey-color: #666;
+            --background-color: #fff;
+            --card-bg: #fdfdfd;
+            --border-color: #eee;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: var(--background-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background-color: #0056b3;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        .main-header {
+            background-color: #fff;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav a {
+            color: var(--dark-color);
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- HERO SECTION (BANNER) --- */
+        #hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%23e0e0e0" fill-opacity="0.2"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h16v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h9v9h1v-9h16Z"/%3E%3Cpath d="M6 6h4v4H6V6zm9 0h4v4h-4V6zm9 0h4v4h-4V6zm9 0h4v4h-4V6zm9 0h4v4h-4V6zm9 0h4v4h-4V6zm9 0h4v4h-4V6zm9 0h4v4h-4V6zM6 15h4v4H6v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zM6 24h4v4H6v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zM6 33h4v4H6v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zM6 42h4v4H6v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zM6 51h4v4H6v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zM6 60h4v4H6v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zM6 69h4v4H6v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zM6 78h4v4H6v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zM6 87h4v4H6v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4zm9 0h4v4h-4v-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            text-align: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        /* --- SERVICES SECTION --- */
+        #services {
+            background-color: var(--light-color);
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+        
+        .service-header img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .service-header h3 {
+            font-size: 1.4rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .service-card li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .service-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-card .price {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* --- WHY-US SECTION --- */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .why-us-item i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .why-us-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        /* --- PROCESS SECTION --- */
+        #process {
+            background-color: var(--light-color);
+        }
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .step {
+            flex: 1;
+        }
+
+        .step .step-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        /* --- FAQ SECTION --- */
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            background: #fff;
+            border: none;
+            text-align: left;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: #f9f9f9;
+        }
+        
+        .faq-answer p {
+            padding: 0 20px 20px;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        /* --- FOOTER --- */
+        .main-footer {
+            background-color: var(--dark-color);
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .main-footer .logo {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .footer-slogan {
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--light-color);
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.8rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--grey-color);
+        }
+
+        /* --- FLOATING ACTION BUTTON --- */
+        .fab-zalo {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #0068ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+        
+        .fab-zalo:hover {
+            transform: scale(1.1);
+        }
+
+        .fab-zalo img {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+            .main-header .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .process-steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nút Zalo nổi -->
+    <a href="https://zalo.me/0971761858" target="_blank" class="fab-zalo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo Icon">
+    </a>
+
+    <!-- Header & Menu -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">Phan Quân</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#services">Dịch Vụ</a></li>
+                    <li><a href="#process">Quy Trình</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner chính -->
+    <section id="hero">
+        <div class="container">
+            <h1>Bảng Giá Dịch Vụ Tài Khoản Premium</h1>
+            <p>Cung cấp các gói tài khoản Netflix, Spotify, ChatGPT... Uy tín - Nhanh chóng - Giá tốt nhất.</p>
+            <a href="#services" class="btn">Xem Tất Cả Dịch Vụ</a>
+        </div>
+    </section>
+
+    <!-- Danh sách dịch vụ -->
+    <section id="services">
+        <div class="container">
+            <h2><i class="fas fa-gem" style="color: var(--primary-color);"></i> Danh Sách Dịch Vụ</h2>
+            <div class="service-grid">
+                
+                <!-- Card Dịch Vụ: Sửa thông tin trong này -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/capcut.png" alt="Capcut Logo">
+                        <h3>CAPCUT PRO</h3>
+                    </div>
+                    <ul>
+                        <li>7 ngày acc cấp <span class="price">15K</span></li>
+                        <li>1 tháng acc cấp <span class="price">80K</span></li>
+                        <li>1 năm chính chủ <span class="price">650K</span></li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/chatgpt.png" alt="ChatGPT Logo">
+                        <h3>CHAT GPT PLUS</h3>
+                    </div>
+                    <ul>
+                        <li>1 tháng dùng chung <span class="price">65K</span></li>
+                        <li>1 tháng chính chủ <span class="price">360K</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/canva.png" alt="Canva Logo">
+                        <h3>CANVA PRO</h3>
+                    </div>
+                    <ul>
+                        <li>1 tháng chính chủ <span class="price">20K</span></li>
+                        <li>1 năm chính chủ <span class="price">120K</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/claude.png" alt="Claude Logo">
+                        <h3>CLAUDE PRO</h3>
+                    </div>
+                    <ul>
+                        <li>1 tháng chính chủ <span class="price">350K</span></li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/netflix.png" alt="Netflix Logo">
+                        <h3>NETFLIX PREMIUM</h3>
+                    </div>
+                    <ul>
+                        <li>1 tháng dùng chung <span class="price">50K</span></li>
+                        <li>1 tháng riêng tư <span class="price">75K</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/perplexity.png" alt="Perplexity Logo">
+                        <h3>PERPLEXITY PRO</h3>
+                    </div>
+                    <ul>
+                        <li>1 tháng chính chủ <span class="price">200K</span></li>
+                        <li>1 năm chính chủ <span class="price">500K</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/youtube.png" alt="YouTube Logo">
+                        <h3>YOUTUBE PREMIUM</h3>
+                    </div>
+                    <ul>
+                        <li>3 tháng chính chủ <span class="price">15K</span></li>
+                        <li>6 tháng chính chủ <span class="price">180K</span></li>
+                        <li>1 năm chính chủ <span class="price">300K</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/gemini.png" alt="Gemini Logo">
+                        <h3>GEMINI ADVANCED</h3>
+                    </div>
+                    <ul>
+                        <li>1 năm chính chủ <span class="price">200K</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/spotify.png" alt="Spotify Logo">
+                        <h3>SPOTIFY PREMIUM</h3>
+                    </div>
+                    <ul>
+                        <li>3 tháng chính chủ <span class="price">120K</span></li>
+                        <li>1 năm chính chủ <span class="price">350K</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/quizlet.png" alt="Quizlet Logo">
+                        <h3>QUIZLET PLUS</h3>
+                    </div>
+                    <ul>
+                        <li>1 tháng riêng tư <span class="price">20K</span></li>
+                        <li>1 năm chính chủ <span class="price">150K</span></li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/googleone.png" alt="Google One Logo">
+                        <h3>GOOGLE ONE</h3>
+                    </div>
+                    <ul>
+                        <li>2TB Add Farm 1 năm <span class="price">350K</span></li>
+                        <li>+ Gemini 1 năm</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <img src="images/duolingo.png" alt="Duolingo Logo">
+                        <h3>SUPER DOULINGO</h3>
+                    </div>
+                    <ul>
+                        <li>1 tháng chính chủ <span class="price">20K</span></li>
+                        <li>1 năm chính chủ <span class="price">140K</span></li>
+                    </ul>
+                </div>
+
+                <!-- Thêm các card dịch vụ khác tại đây -->
+                <!-- Super Gork không có logo rõ ràng, bạn có thể tạo một logo tạm hoặc bỏ qua -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lý do chọn chúng tôi -->
+    <section id="why-us">
+        <div class="container">
+            <h2>Tại Sao Chọn Phan Quân?</h2>
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Bảo Hành Uy Tín</h4>
+                    <p>Cam kết hỗ trợ 1 đổi 1 trong suốt thời gian sử dụng nếu có lỗi phát sinh.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Giao Dịch Nhanh Chóng</h4>
+                    <p>Nhận thông tin tài khoản chỉ sau vài phút xác nhận thanh toán.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-tags"></i>
+                    <h4>Giá Cả Cạnh Tranh</h4>
+                    <p>Luôn mang đến mức giá tốt nhất và hợp lý nhất cho mọi khách hàng.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-headset"></i>
+                    <h4>Hỗ Trợ 24/7</h4>
+                    <p>Sẵn sàng tư vấn và giải đáp mọi thắc mắc của bạn qua Zalo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quy trình mua hàng -->
+    <section id="process">
+        <div class="container">
+            <h2>Quy Trình Mua Hàng Đơn Giản</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h4>Chọn Gói Dịch Vụ</h4>
+                    <p>Lướt xem và lựa chọn gói tài khoản phù hợp với nhu cầu của bạn.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h4>Liên Hệ Zalo</h4>
+                    <p>Kết bạn và nhắn tin qua Zalo số <strong>097.176.1858</strong> để đặt hàng.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h4>Thanh Toán & Nhận Tài Khoản</h4>
+                    <p>Chuyển khoản theo thông tin được cung cấp và nhận tài khoản ngay lập tức.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Câu hỏi thường gặp -->
+    <section id="faq">
+        <div class="container">
+            <h2>Câu Hỏi Thường Gặp (FAQ)</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Tài khoản "chính chủ" và "dùng chung" khác nhau thế nào?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p><strong>Tài khoản chính chủ:</strong> Là tài khoản được nâng cấp trên chính email của bạn, bạn có toàn quyền thay đổi thông tin, mật khẩu và sử dụng riêng tư. <br><strong>Tài khoản dùng chung/acc cấp:</strong> Là tài khoản do bên mình cung cấp, bạn sẽ sử dụng chung với người khác hoặc dùng hồ sơ (profile) riêng trên tài khoản đó. Không được đổi mật khẩu.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Chính sách bảo hành của shop ra sao?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Chúng tôi cam kết bảo hành 1 đổi 1 hoặc hoàn tiền tương ứng với thời gian còn lại nếu tài khoản gặp bất kỳ lỗi nào từ phía nhà cung cấp trong suốt quá trình bạn sử dụng.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Sau khi thanh toán, tôi nhận tài khoản trong bao lâu?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Ngay sau khi bạn gửi biên lai và chúng tôi xác nhận đã nhận được thanh toán, tài khoản sẽ được gửi cho bạn trong vòng 5-10 phút.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Chân trang -->
+    <footer id="contact" class="main-footer">
+        <div class="container">
+            <h3 class="logo">Phan Quân</h3>
+            <p class="footer-slogan">Uy Tín - Chất Lượng - Nhanh Chóng</p>
+            <div class="social-links">
+                <!-- Thay # bằng link Facebook của bạn -->
+                <a href="https://www.facebook.com/phan.quan.886789" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://zalo.me/0971761858" target="_blank" title="Zalo"><i class="fas fa-comment-dots"></i></a>
+            </div>
+            <p class="copyright">© 2024 Bản quyền thuộc về Phan Quân. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript cho phần FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const currentlyActive = document.querySelector('.faq-item.active');
+                    if (currentlyActive && currentlyActive !== item) {
+                        currentlyActive.classList.remove('active');
+                    }
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
